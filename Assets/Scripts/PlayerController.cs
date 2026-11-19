@@ -7,8 +7,10 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     public float moveSpeed = 5f;
     bool isWalking;
-    bool isGrounded;
+    public bool grounded;
     FacingDirection fd;
+    BoxCollider2D coll;
+    public LayerMask ground;
 
     public enum FacingDirection
     {
@@ -18,7 +20,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        isGrounded = true;
+        coll = GetComponent<BoxCollider2D>();
+        grounded = true;
     }
 
     void FixedUpdate()
@@ -39,6 +42,15 @@ public class PlayerController : MonoBehaviour
             playerInput = Vector2.zero;
         }
 
+        if(Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, 0.3f, ground))
+        {
+            grounded = true;
+        }
+        else
+        {
+            grounded = false;
+        }
+        
         // The input from the player needs to be determined and
         // then passed in the to the MovementUpdate which should
         // manage the actual movement of the character.
@@ -73,7 +85,7 @@ public class PlayerController : MonoBehaviour
     }
     public bool IsGrounded()
     {
-        return isGrounded;
+        return grounded;
     }
 
     public FacingDirection GetFacingDirection()
