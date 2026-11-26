@@ -4172,11 +4172,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 82246069086624815, guid: c0063abd85bf41b4faef95c439286949, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.76
+      value: 3.506
       objectReference: {fileID: 0}
     - target: {fileID: 82246069086624815, guid: c0063abd85bf41b4faef95c439286949, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.16
+      value: -1.476
       objectReference: {fileID: 0}
     - target: {fileID: 82246069086624815, guid: c0063abd85bf41b4faef95c439286949, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4209,6 +4209,10 @@ PrefabInstance:
     - target: {fileID: 82246069086624815, guid: c0063abd85bf41b4faef95c439286949, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7415343670533724191, guid: c0063abd85bf41b4faef95c439286949, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.23
       objectReference: {fileID: 0}
     - target: {fileID: 7428298229329625348, guid: c0063abd85bf41b4faef95c439286949, type: 3}
       propertyPath: moveSpeed
@@ -4296,10 +4300,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 2
+  m_Mass: 1
   m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_AngularDamping: 0
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
